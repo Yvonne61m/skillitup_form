@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+/* .btn-add::after { content: 'Add'; }
+.array-item-move-up::after { content: 'Move Up'; }
+.array-item-move-down::after { content: 'Move Down'; }
+.array-item-remove::after { content: 'Remove'; } */
 
 .App-header {
   background-color: white;
