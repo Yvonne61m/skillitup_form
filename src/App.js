@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from "react-jsonschema-form";
 import JSONSchemaForm from "react-jsonschema-form";
+// npm install react-jsonschema-form --save
 import * as sample from './skillItUp.json';
 import { Editor } from 'react-draft-wysiwyg';
+// npm install -S react-draft-wysiwyg
 import { convertFromRaw } from 'draft-js';
+// npm install --save draft-js react react-dom
 import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 
