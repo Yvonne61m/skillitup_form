@@ -9,6 +9,10 @@ import { Editor } from 'react-draft-wysiwyg';
 import { convertFromRaw } from 'draft-js';
 // npm install --save draft-js react react-dom
 import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import { EditorState, convertToRaw, ContentState } from 'draft-js';
+
+import draftToHtml from 'draftjs-to-html';
+import htmlToDraft from 'html-to-draftjs';
 
 
 const log = (type) => console.log.bind(console, type);
@@ -39,16 +43,21 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    const contentState = convertFromRaw(content);
-    this.state = {
-      contentState,
-      showHTMLEditor: false
-    };
+    const html = '<p>Hey this <strong>editor</strong> rocks 😀</p>';
+    const contentBlock = htmlToDraft(html);
+    if (contentBlock) {
+      const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+      const editorState = EditorState.createWithContent(contentState);
+      this.state = {
+        editorState,
+        showHTMLEditor: false
+      };
+    }
   }
 
-  onContentStateChange: Function = (contentState) => {
+  onEditorStateChange: Function = (editorState) => {
     this.setState({
-      contentState,
+      editorState,
     });
   };
 
@@ -60,9 +69,9 @@ class App extends Component {
         id: { type: "number", title: "id", default: sample.id },
         title: { type: "string", title: "title", default: sample.title },
         introduction: { type: "string", title: "introduction", default: sample.introduction },
-        criterionId: { type: "number", title: "criterionId", default: sample.criterionId, canAdd: true },
-        dtCreated: { type: "string", title: "dtCreated", default: sample.dtCreated },
-        dtUpdated: { type: "string", title: "dtUpdated", default: sample.dtUpdated },
+        // criterionId: { type: "number", title: "criterionId", default: sample.criterionId, canAdd: true },
+        // dtCreated: { type: "string", title: "dtCreated", default: sample.dtCreated },
+        // dtUpdated: { type: "string", title: "dtUpdated", default: sample.dtUpdated },
         questions: { 
           title: "questions", 
           type: "array", 
@@ -95,7 +104,7 @@ class App extends Component {
         // done: { type: "boolean", title: "Done?", default: false }
       }
     };
-    const { contentState } = this.state;
+    const { editorState } = this.state;
     const onSubmit = ({ formData }, e) => console.log("Data submitted: ", formData)
 
 
@@ -114,14 +123,15 @@ class App extends Component {
             this.state.showHTMLEditor &&
             <div>
               <Editor
+                editorState={editorState}
                 wrapperClassName="demo-wrapper"
                 editorClassName="demo-editor"
-                onContentStateChange={this.onContentStateChange}
-              />
+                onEditorStateChange={this.onEditorStateChange}
+                />
               <textarea
                 disabled
-                value={JSON.stringify(contentState, null, 4)}
-              />
+                value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
+                />
             </div>
           }
           <button onClick={() => { this.setState({ showHTMLEditor: !this.state.showHTMLEditor }) }}>Show Editor</button>
