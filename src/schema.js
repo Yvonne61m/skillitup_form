@@ -1,3 +1,15 @@
+import { Editor } from 'react-draft-wysiwyg';
+// npm install -S react-draft-wysiwyg
+import React, { Component } from "react";
+import { convertFromRaw } from 'draft-js';
+// npm install --save draft-js react react-dom
+import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import { EditorState, convertToRaw, ContentState } from 'draft-js';
+
+import draftToHtml from 'draftjs-to-html';
+import htmlToDraft from 'html-to-draftjs';
+import Wysiwyg from './wysiwyg.js';
+
 export const originalSchema = {
     "definitions": {
       "Thing": {
@@ -41,7 +53,7 @@ export const originalSchema = {
           {
             "title": "A string value",
             "type": "string",
-            "default": "lorem ipsum"
+            "default": "<p>bild</p>"
           },
           {
             "title": "a boolean value",
@@ -135,6 +147,9 @@ export const originalSchema = {
     }
   }
 
+export const widgets = {
+  myWysiwyg : Wysiwyg
+}
 
   export const originalUISchema = {
     "listOfStrings": {
@@ -148,7 +163,7 @@ export const originalSchema = {
     "fixedItemsList": {
       "items": [
         {
-          "ui:widget": "textarea"
+          "ui:widget": "myWysiwyg"
         },
         {
           "ui:widget": "select"

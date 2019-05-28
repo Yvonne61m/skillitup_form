@@ -1,20 +1,33 @@
-.xApp {
-  text-align: center;
+.App {
+  /* text-align: center; */
+  margin: 10px
 }
 
-/* .btn-add::after { content: 'Add'; }
+/* .body{
+  overflow-x: hidden;
+} */
+/* .modal{
+  margin-left: -10px;
+}
+
+body.modal-open {
+  margin-right: 0;
+} */
+
+.btn-add::after { content: 'Add'; }
 .array-item-move-up::after { content: 'Move Up'; }
 .array-item-move-down::after { content: 'Move Down'; }
-.array-item-remove::after { content: 'Remove'; } */
+.array-item-remove::after { content: 'Remove'; }
 
 .App-header {
+  margin: 10px;
   background-color: white;
-  /* min-height: 100vh; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-it ems: center;
-  justify-content: center; */
-  /* font-size: calc(10px + 2vmin); */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: black;
 }
 
@@ -22,8 +35,8 @@ textarea {
   min-width: 130vh;
   min-height: 30vh;
 }
-/* .App-link {
-  color: #61dafb;
-} */
+.App-link {
+  color: #262727;
+}
 
 
