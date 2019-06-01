@@ -11,27 +11,38 @@ import htmlToDraft from 'html-to-draftjs';
 import Wysiwyg from './wysiwyg.js';
 
 export const originalSchema = {
-  "definitions": {
-    "Thing": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "default": "Default name"
-        }
-      }
-    }
-  },
+  // "definitions": {
+  //   "Thing": {
+  //     "type": "object",
+  //     "properties": {
+  //       "name": {
+  //         "type": "string",
+  //         "default": "Default name"
+  //       }
+  //     }
+  //   }
+  // },
   "type": "object",
   "properties": {
-    // "listOfStrings": {
-    //   "type": "array",
-    //   "title": "A list of strings",
-    //   "items": {
-    //     "type": "string",
-    //     "default": "bazinga"
-    //   }
-    // },
+    "listOfStrings": {
+      "type": "array",
+      "title": "Challenge",
+      "description": "This is a challenge!",
+      "firstName": {
+        "type": "string",
+        "title": "First name"
+      },
+      "lastName": {
+        "type": "string",
+        "title": "Last name"
+      },
+      "items": {
+        "title": "question",
+        "type": "string",
+        "default": "bazinga",
+      },
+    },
+    
     // "multipleChoicesList": {
     //   "type": "array",
     //   "title": "A multiple choices list",
@@ -55,17 +66,17 @@ export const originalSchema = {
     //       "type": "string",
     //       "default": "<p>bild</p>"
     //     }
-    //     // ,
-    //     // {
-    //     //   "title": "a boolean value",
-    //     //   "type": "boolean"
-    //     // }
+    //     ,
+    //     {
+    //       "title": "a boolean value",
+    //       "type": "boolean"
+    //     }
     //   ]
-    //   // ,
-    //   // "additionalItems": {
-    //   //   "title": "Additional item",
-    //   //   "type": "number"
-    //   // }
+    //   ,
+    //   "additionalItems": {
+    //     "title": "Additional item",
+    //     "type": "number"
+    //   }
     // },
     // "minItemsList": {
     //   "type": "array",
@@ -89,18 +100,19 @@ export const originalSchema = {
     //     "default": "unidentified"
     //   }
     // },
-    "nestedList": {
-      "type": "array",
-      "title": "Chanllenges",
-      "items": {
-        "type": "array",
-        "title": "Questions",
-        "items": {
-          "type": "string",
-          "default": "<p>Edit your question here!</p>"
-        }
-      }
-    },
+    // "nestedList": {
+    //   "type": "array",
+    //   "title": "ChallengeList",
+    //   "items": {
+    //     "type": "array",
+    //     "title": "Challenge",
+    //     "items": {
+    //       "title": "Question",
+    //       "type": "string",
+    //       "default": "<p>Edit your question here!</p>"
+    //     }
+    //   }
+    // },
     // "unorderable": {
     //   "title": "Unorderable items",
     //   "type": "array",
@@ -154,56 +166,61 @@ export const widgets = {
 }
 
 export const originalUISchema = {
-  "nestedList": {
-    "items": {
-      "items": {
-        "ui:widget": "myWysiwyg"
-      }
-    }
-  },
+  // "nestedList": {
+  //   "items": {
+  //     "items": {
+  //       "ui:widget": "myWysiwyg"
+  //     }
+  //   }
+  // },
   "listOfStrings": {
     "items": {
+      // "ui:emptyValue": ""
+      "ui:widget": "myWysiwyg"
+    ,
+    "firstName": {
+      "ui:autofocus": true,
       "ui:emptyValue": ""
-    }
+    }}
   },
-  "multipleChoicesList": {
-    "ui:widget": "checkboxes"
-  },
-  "fixedItemsList": {
-    "items": [
-      {
-        "ui:widget": "myWysiwyg"
-      },
-      {
-        "ui:widget": "select"
-      }
-    ],
-    "additionalItems": {
-      "ui:widget": "updown"
-    }
-  },
-  "unorderable": {
-    "ui:options": {
-      "orderable": false
-    }
-  },
-  "unremovable": {
-    "ui:options": {
-      "removable": false
-    }
-  },
-  "noToolbar": {
-    "ui:options": {
-      "addable": false,
-      "orderable": false,
-      "removable": false
-    }
-  },
-  "fixedNoToolbar": {
-    "ui:options": {
-      "addable": false,
-      "orderable": false,
-      "removable": false
-    }
-  }
+  // "multipleChoicesList": {
+  //   "ui:widget": "checkboxes"
+  // },
+  // "fixedItemsList": {
+  //   "items": [
+  //     {
+  //       "ui:widget": "myWysiwyg"
+  //     },
+  //     {
+  //       "ui:widget": "select"
+  //     }
+  //   ],
+  //   "additionalItems": {
+  //     "ui:widget": "updown"
+  //   }
+  // },
+  // "unorderable": {
+  //   "ui:options": {
+  //     "orderable": false
+  //   }
+  // },
+  // "unremovable": {
+  //   "ui:options": {
+  //     "removable": false
+  //   }
+  // },
+  // "noToolbar": {
+  //   "ui:options": {
+  //     "addable": false,
+  //     "orderable": false,
+  //     "removable": false
+  //   }
+  // },
+  // "fixedNoToolbar": {
+  //   "ui:options": {
+  //     "addable": false,
+  //     "orderable": false,
+  //     "removable": false
+  //   }
+  // }
 }

@@ -2,11 +2,7 @@
     "id": 157,
     "title": "Traffic%20issues%20data%20context",
     "introduction": "%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27utf-8%27%3F%3E%0A%3Cp%3ETeam%20Data%20Science%20is%20advising%20the%20Mayor%20on%20how%20to%20decrease%20traffic%20congestion%20in%20the%20city.%20To%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20collect%20data%2C%20they%20put%20traffic%20cameras%20around%20the%20university%20area.%20The%20cameras%20photograph%20each%20car%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20that%20passes.%20The%20camera%20notes%20the%20date%20and%20time%20and%20determines%20the%20make%20and%20model%20of%20the%20cars%20that%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pass.%20%3C%2Fp%3E",
-    "criterionId": 32,
-    "dtCreated": "2018-07-13T19:45:37.000Z",
-    "dtUpdated": "2019-04-10T13:51:17.000Z",
-    "challengeId": -1,
-    "sort": 300,
+    
     "questions": [
         {
             "questionId": 158,
@@ -56,18 +52,5 @@
                 "First%2C%20collect%20data%20from%20all%20around%20the%20city.%20Decide%20how%20many%20and%20what%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20locations%20are%20needed%20for%20you%20to%20say%20that%20you%20have%20measured%20traffic%20in%20the%20city.%20Second%2C%20form%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20clear%20idea%20of%20how%20the%20data%20collected%20can%20be%20related%20to%20the%20mayor%27s%20question.%20If%20you%20can%20indeed%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20measure%20traffic%2C%20then%20you%20can%20design%20experiments%20to%20measure%20the%20increase%20or%20decrease%20in%20traffic%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20based%20on%20various%20interventions."
             ]
         }
-    ],
-    "criterionName": "Say%20what%20a%20data%20context%20is",
-    "levelId": 149,
-    "levelName": "Whats%20a%20data%20set%3F",
-    "skillId": 3,
-    "skillName": "Data%20Science",
-    "challenges": [
-        {
-            "challengeId": 1,
-            "challengeName": "Data%20Sets"
-        }
-    ],
-    "type": "textReveal",
-    "questionId": 157
+    ]
 }
