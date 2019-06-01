@@ -39,6 +39,11 @@ export class Wysiwyg extends Component{
       wrapperClassName="demo-wrapper"
       editorClassName="demo-editor"
       onEditorStateChange={this.onEditorStateChange}
+      toolbar= {
+        {
+          options: ['inline', 'list', 'link', 'image'],
+        }
+      }
       />
     <textarea
       disabled
