@@ -159,60 +159,11 @@ export const originalSchema = {
     //   }
     // }
   }
-
-export const widgets = {
+}
+export const widgets ={
   myWysiwyg : Wysiwyg
 }
 
-<<<<<<< HEAD
-  export const originalUISchema = {
-    "listOfStrings": {
-      "items": {
-        "ui:emptyValue": ""
-      }
-    },
-    "multipleChoicesList": {
-      "ui:widget": "checkboxes"
-    },
-    "fixedItemsList": {
-      "items": [
-        {
-          "ui:widget": "myWysiwyg"
-        },
-        {
-          "ui:widget": "select"
-        }
-      ],
-      "additionalItems": {
-        "ui:widget": "updown"
-      }
-    },
-    "unorderable": {
-      "ui:options": {
-        "orderable": false
-      }
-    },
-    "unremovable": {
-      "ui:options": {
-        "removable": false
-      }
-    },
-    "noToolbar": {
-      "ui:options": {
-        "addable": false,
-        "orderable": false,
-        "removable": false
-      }
-    },
-    "fixedNoToolbar": {
-      "ui:options": {
-        "addable": false,
-        "orderable": false,
-        "removable": false
-      }
-    }
-  }
-=======
 export const originalUISchema = {
   // "nestedList": {
   //   "items": {
@@ -272,4 +223,3 @@ export const originalUISchema = {
   //   }
   // }
 }
->>>>>>> 542f577... changed css, schema
