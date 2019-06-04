@@ -10,6 +10,7 @@ import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 import Wysiwyg from './wysiwyg.js';
 
+
 export const originalSchema = {
   // "definitions": {
   //   "Thing": {

@@ -52,7 +52,6 @@ class App extends Component {
         onSubmit={onSubmit}
         onError={log("errors")}
         widgets = {widgets}/>
-       {/* FieldTemplate = {Tpl}  */}
     </header>
       </div>
     )
