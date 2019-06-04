@@ -15,7 +15,7 @@ import './_bootswatch.scss'
 import './_variables.scss'
 import './custom.scss'
 import './App.css';
-// import './bootstrap-solarized-light.css'
+import './bootstrap-solarized-light.css'
 import React, { Component } from "react";
 import { render } from "react-dom";
 import {widgets, originalSchema, originalUISchema, formData} from './schema.js'

@@ -268,7 +268,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #586e75;
-  background-color: #fdf6e3;
+  background-color:white;
 }
 input,
 button,
@@ -1629,15 +1629,15 @@ fieldset {
   min-width: 0;
 }
 legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
-  line-height: inherit;
-  color: #586e75;
-  border: 0;
-  border-bottom: 1px solid #e5e5e5;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
 }
 label {
   display: inline-block;
@@ -1684,13 +1684,13 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 350px;
   height: 34px;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.428571429;
   color: #839496;
-  background-color: #fefcf6;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #93a1a1;
   border-radius: 4px;
