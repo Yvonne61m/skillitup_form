@@ -29,7 +29,7 @@ export class Wysiwyg extends Component{
           this.props.onChange(draftToHtml(convertToRaw(this.state.editorState.getCurrentContent())))
         this.setState({
           editorState,
-        });
+        }); 
       };
       render(){
           console.log("props---",this.props)
