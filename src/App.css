@@ -14,7 +14,7 @@ body.modal-open {
   margin-right: 0;
 } */
 
-.btn-add::after { content: ''; }
+.btn-add::after { content: '+'; }
 .array-item-move-up::after { content: '↑'; }
 .array-item-move-down::after { content: '↓'; }
 .array-item-remove::after { content: '-'; }

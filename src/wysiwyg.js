@@ -45,10 +45,10 @@ export class Wysiwyg extends Component{
         }
       }
       />
-    <textarea
+    {/* <textarea
       disabled
       value={draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))}
-      />
+      /> */}
   </div>
   )}
 }

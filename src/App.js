@@ -4,13 +4,16 @@ import './bootstrap.min.css'
 import './_bootswatch.scss'
 import './_variables.scss'
 import './custom.scss'
+import './App.css';
+// npm install bootstrap
+// npm install bootstrap-solarized
+// npm install resolve-url-loader
 import React, { Component } from "react";
 import { render } from "react-dom";
 import {widgets, originalSchema, originalUISchema} from './schema.js'
 // npm install react-jsonschema-form --save
 import Form from "react-jsonschema-form";
-import './bootstrap.min.css';
-import './App.css';
+
 
 
 // import './node_modules/bootstrap-solarized-light.css';
