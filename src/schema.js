@@ -21,55 +21,32 @@ export const originalSchema = {
     "challenge_title": {
       "title": "Title",
       "type": "string",
-      "default": sample.title
+      "default": ""
     },
     "challenge_des": {
       "title": "Introduction",
       "type": "string",
-      "default": sample.introduction
+      "default":""
     },
-    "Question": {
+    "Questions": {
       "title": "Questions",
-      "type": "object",
-      "properties": {
-        "OldQuestion": {
-          "type": "object",
-          "title": "Question",
-          "properties": {
-            "questionText": {
-              "title": "QuestionText",
-              "type": "string",
-              "default": sample.questions[0].questionText
-            },
-            "answer": {
-              "title": "AnswerText",
-              "type": "string",
-              "default": sample.questions[0].expectedAnswer
-            },
-          }
-        },
-        "NewQuestion": {
-          "title": " ",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "title": "Question",
-            "properties": {
-              "questionText": {
-                "title": "QuestionText",
-                "type": "string",
-                "default": "Please enter a question."
-              },
-              "answer": {
-                "title": "AnswerText",
-                "type": "string",
-              },
-            }
+      "type": "array",
+      "items": {
+        "title": "Question",
+        "type": "object",
+        "properties": {
+          "questionText": {
+            "title": "QuestionText",
+            "type": "string",
+            "default": "Please enter a question."
           },
+          "answerText": {
+            "title": "AnswerText",
+            "type": "string",
+          }
         },
       }
     },
-
   }
 }
 
@@ -83,21 +60,25 @@ export const originalUISchema = {
   "challenge_des": {
     "ui:widget": "myWysiwyg"
   },
-  "Question": {
-    "NewQuestion": {
-      "items": {
-        "questionText": {
-          "ui:widget": "myWysiwyg",
-        }
-      }
-    }
-  },
-  "Question": {
-    "OldQuestion": {
+
+  "Questions": {
+    "items": {
       "questionText": {
         "ui:widget": "myWysiwyg",
       }
     }
-  }
-
+  },
 }
+
+export const formData = {
+  "challenge_title": sample.title,
+  "challenge_des": sample.introduction,
+  "Questions":[
+    {
+      "questionText": sample.questions[0].questionText,
+      "answerText":sample.questions[0].expectedAnswer
+    }
+  ]
+}
+
+

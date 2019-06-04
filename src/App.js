@@ -15,9 +15,10 @@ import './_bootswatch.scss'
 import './_variables.scss'
 import './custom.scss'
 import './App.css';
+// import './bootstrap-solarized-light.css'
 import React, { Component } from "react";
 import { render } from "react-dom";
-import {widgets, originalSchema, originalUISchema} from './schema.js'
+import {widgets, originalSchema, originalUISchema, formData} from './schema.js'
 import Form from "react-jsonschema-form";
 import * as sample from './skillItUp.json';
 
@@ -32,6 +33,7 @@ class App extends Component {
       <header className="App-header">
       <Form className = "Form" schema={originalSchema}
         uiSchema = {originalUISchema}
+        formData={formData} 
         onChange={log("changed")}
         onSubmit={onSubmit}
         onError={log("errors")}
