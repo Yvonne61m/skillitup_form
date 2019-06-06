@@ -10,6 +10,9 @@ import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 
+import PropTypes from "prop-types";
+
+
 
 export class Wysiwyg extends Component{
     constructor(props) {
@@ -62,4 +65,9 @@ export class Wysiwyg extends Component{
   </div>
   )}
 }
+
+Wysiwyg.defaultProps = {
+  
+}
+
 export default Wysiwyg

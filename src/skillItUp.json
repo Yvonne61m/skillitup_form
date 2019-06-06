@@ -1,55 +1,32 @@
 {
     "id": 157,
-    "title": "Traffic%20issues%20data%20context",
-    "introduction": "%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27utf-8%27%3F%3E%0A%3Cp%3ETeam%20Data%20Science%20is%20advising%20the%20Mayor%20on%20how%20to%20decrease%20traffic%20congestion%20in%20the%20city.%20To%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20collect%20data%2C%20they%20put%20traffic%20cameras%20around%20the%20university%20area.%20The%20cameras%20photograph%20each%20car%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20that%20passes.%20The%20camera%20notes%20the%20date%20and%20time%20and%20determines%20the%20make%20and%20model%20of%20the%20cars%20that%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pass.%20%3C%2Fp%3E",
-    
+    "title": "ASSIGNMENT 1",
+    "introduction": "I AM INTRODUCTION",
+   
     "questions": [
         {
             "questionId": 158,
-            "questionText": "%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27utf-8%27%3F%3E%0A%3Cp%3EHow%20was%20data%20collected%3F%3C%2Fp%3E",
+            "questionText": "1st QUESTION",
             "questionIndex": 0,
             "expectedAnswer": [
-                "The%20image%20data%20was%20captured%20using%20cameras%20mounted%20around%20the%20University%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20neighborhood.%20"
+                "The answer 1"
             ]
         },
         {
             "questionId": 160,
-            "questionText": "%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27utf-8%27%3F%3E%0A%3Cp%3EWhat%20questions%20are%20the%20data%20supposed%20to%20answer%3F%3C%2Fp%3E",
+            "questionText": "2ND QUESTION ",
             "questionIndex": 1,
             "expectedAnswer": [
-                "The%20mayor%20wants%20to%20know%20what%20to%20do%20to%20decrease%20traffic%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20problems."
+                "The answer 2.",
+                "qqq"
             ]
         },
         {
             "questionId": 162,
-            "questionText": "%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27utf-8%27%3F%3E%0A%3Cp%3EWhat%20data%20was%20collected%3F%3C%2Fp%3E",
+            "questionText": "3RD QUESTION ",
             "questionIndex": 2,
             "expectedAnswer": [
-                "Date%2C%20time%2C%20make%20and%20model%20of%20cars.%20"
-            ]
-        },
-        {
-            "questionId": 1570,
-            "questionText": "%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27utf-8%27%3F%3E%0A%3Cp%3EWas%20there%20any%20bias%20in%20the%20way%20the%20data%20was%20collected%3F%3C%2Fp%3E",
-            "questionIndex": 3,
-            "expectedAnswer": [
-                "Yes%2C%20the%20cameras%20are%20only%20collecting%20data%20in%20one%20part%20of%20town.%20Are%20the%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cameras%20able%20to%20collect%20data%20in%20the%20dark%3F%20If%20not%2C%20that%20will%20eliminate%20a%20lot%20of%20data%2C%20especially%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20during%20the%20winter%20months.%20"
-            ]
-        },
-        {
-            "questionId": 1572,
-            "questionText": "%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27utf-8%27%3F%3E%0A%3Cp%3EAre%20the%20data%20sufficient%20to%20answer%20the%20question%3F%3C%2Fp%3E",
-            "questionIndex": 4,
-            "expectedAnswer": [
-                "No%2C%20The%20data%20can%20definitely%20address%20the%20question%2C%20%22how%20many%20and%20what%20types%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20of%20cars%20pass%20by%20in%20the%20university%20area.%22%20However%2C%20there%20is%20a%20long%20way%20from%20that%20question%20to%20the%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20real%20question%2C%20%22What%20to%20do%20to%20decrease%20traffic%20throughout%20the%20city.%22"
-            ]
-        },
-        {
-            "questionId": 1574,
-            "questionText": "%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27utf-8%27%3F%3E%0A%3Cp%3EWhat%20suggestions%20might%20you%20make%20to%20Team%20Data%20Science%3F%3C%2Fp%3E",
-            "questionIndex": 5,
-            "expectedAnswer": [
-                "First%2C%20collect%20data%20from%20all%20around%20the%20city.%20Decide%20how%20many%20and%20what%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20locations%20are%20needed%20for%20you%20to%20say%20that%20you%20have%20measured%20traffic%20in%20the%20city.%20Second%2C%20form%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20clear%20idea%20of%20how%20the%20data%20collected%20can%20be%20related%20to%20the%20mayor%27s%20question.%20If%20you%20can%20indeed%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20measure%20traffic%2C%20then%20you%20can%20design%20experiments%20to%20measure%20the%20increase%20or%20decrease%20in%20traffic%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20based%20on%20various%20interventions."
+                " 1"
             ]
         }
     ]

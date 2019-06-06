@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "bootstrap-solarized": "^1.0.2",
     "draft-js": "^0.10.5",
     "draftjs-to-html": "^0.8.4",
     "font": "0.0.4",

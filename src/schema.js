@@ -28,21 +28,30 @@ export const originalSchema = {
       "type": "string",
       "default":""
     },
-    "Questions": {
-      "title": "Questions",
+    "questions": {
+      "title": "All Questions",
       "type": "array",
       "items": {
-        "title": "Question",
+        "title": "Q&A",
         "type": "object",
         "properties": {
           "questionText": {
-            "title": "QuestionText",
+            "title": "Question Text",
             "type": "string",
             "default": "Please enter a question."
           },
-          "answerText": {
-            "title": "AnswerText",
-            "type": "string",
+          "answerTexts": {
+            "title": "All Answers Texts",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "answerText": {
+                  "title":  "Answer Text",
+                  "type": "string",
+                }
+              }
+            }
           }
         },
       }
@@ -61,7 +70,7 @@ export const originalUISchema = {
     "ui:widget": "myWysiwyg"
   },
 
-  "Questions": {
+  "questions": {
     "items": {
       "questionText": {
         "ui:widget": "myWysiwyg",
@@ -70,15 +79,30 @@ export const originalUISchema = {
   },
 }
 
+const questions =
+  Object.keys(sample.questions).map((e) => {
+    return (
+      {
+        "questionText": sample.questions[e].questionText,
+        "answerTexts": 
+        Object.keys(sample.questions[e].expectedAnswer).map((e1) => {
+          return (
+            {
+              "answerText": sample.questions[e].expectedAnswer[e1]
+            }
+          )
+        })
+      }
+    )
+  })
+
+
+
+
 export const formData = {
   "challenge_title": sample.title,
   "challenge_des": sample.introduction,
-  "Questions":[
-    {
-      "questionText": sample.questions[0].questionText,
-      "answerText":sample.questions[0].expectedAnswer
-    }
-  ]
+  "questions": questions
 }
 
 
