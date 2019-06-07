@@ -17,6 +17,11 @@ export const originalSchema = {
   "title": "CHALLENGE",
   // "description": "These samples are best viewed without live validation.",
   "type": "object",
+  "required": [
+    "challenge_title",
+    "challenge_des",
+    "questions"
+  ],
   "properties": {
     "challenge_title": {
       "title": "Title",
@@ -34,6 +39,9 @@ export const originalSchema = {
       "items": {
         "title": "Q&A",
         "type": "object",
+        "required": [
+          "questionText"
+        ],
         "properties": {
           "questionText": {
             "title": "Question Text",
@@ -43,8 +51,12 @@ export const originalSchema = {
           "answerTexts": {
             "title": "All Answers Texts",
             "type": "array",
+            "minItems": 1,
             "items": {
               "type": "object",
+              "required": [
+                "answerText"
+              ],
               "properties": {
                 "answerText": {
                   "title":  "Answer Text",
