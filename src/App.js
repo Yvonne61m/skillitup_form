@@ -1,92 +1,47 @@
-import React, { Component } from 'react';
-import './App.css';
-import Form from "react-jsonschema-form";
-import JSONSchemaForm from "react-jsonschema-form";
-// npm install react-jsonschema-form --save
-import * as sample from './skillItUp.json';
-import { Editor } from 'react-draft-wysiwyg';
-// npm install -S react-draft-wysiwyg
-import { convertFromRaw } from 'draft-js';
-// npm install --save draft-js react react-dom
-import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+/***************
+INSTALL INSTRUCTION
+npm install bootstrap
+npm install bootstrap-solarized
+npm install resolve-url-loader
+npm install -S react-draft-wysiwyg
+npm install --save draft-js react react-dom
+npm install react-jsonschema-form --save 
+ ***************/
 
+import 'bootstrap/dist/css/bootstrap.css';
+import './bootstrap.css'
+import './bootstrap.min.css'
+import './_bootswatch.scss'
+import './_variables.scss'
+import './custom.scss'
+import './App.css';
+import './bootstrap-solarized-light.css'
+import React, { Component } from "react";
+import { render } from "react-dom";
+import {widgets, originalSchema, originalUISchema, formData} from './schema.js'
+import Form from "react-jsonschema-form";
+import * as sample from './skillItUp.json';
 
 const log = (type) => console.log.bind(console, type);
-const content = { "entityMap": {}, "blocks": [{ "key": "637gr", "text": "Initialized from content state.", "type": "unstyled", "depth": 0, "inlineStyleRanges": [], "entityRanges": [], "data": {} }] };
-
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    const contentState = convertFromRaw(content);
-    this.state = {
-      contentState,
-      showHTMLEditor: false
-    };
-  }
-
-  onContentStateChange: Function = (contentState) => {
-    this.setState({
-      contentState,
-    });
-  };
-
+  
   render() {
-    const schema = {
-      title: "SkillItUp",
-      type: "object",
-      properties: {
-        id: { type: "number", title: "id", default: sample.id },
-        title: { type: "string", title: "title", default: sample.title },
-        introduction: { type: "string", title: "introduction", default: sample.introduction },
-        criterionId: { type: "number", title: "criterionId", default: sample.criterionId },
-        dtCreated: { type: "string", title: "dtCreated", default: sample.dtCreated },
-        dtUpdated: { type: "string", title: "dtUpdated", default: sample.dtUpdated },
-        // done: { type: "boolean", title: "Done?", default: false }
-      }
-    };
-    const { contentState } = this.state;
     const onSubmit = ({ formData }, e) => console.log("Data submitted: ", formData)
-
-
+    
     return (
       <div className="App">
-        <header className="App-header">
-          <Form schema={schema}
-            onChange={console.log("changed")}
-            // onSubmit={onSubmit} ref={(form) => {yourForm = form;}}
-            onSubmit={onSubmit}
-            onError={log("errors")}
-             />
-
-
-          {
-            this.state.showHTMLEditor &&
-            <div>
-              <Editor
-                wrapperClassName="demo-wrapper"
-                editorClassName="demo-editor"
-                onContentStateChange={this.onContentStateChange}
-              />
-              <textarea
-                disabled
-                value={JSON.stringify(contentState, null, 4)}
-              />
-            </div>
-          }
-          <button onClick={() => { this.setState({ showHTMLEditor: !this.state.showHTMLEditor }) }}>Show Editor</button>
-
-        </header>
+      <header className="App-header">
+      <Form className = "Form" schema={originalSchema}
+        uiSchema = {originalUISchema}
+        formData={formData} 
+        onChange={log("changed")}
+        onSubmit={onSubmit}
+        onError={log("errors")}
+        widgets = {widgets}/>
+    </header>
       </div>
     )
   }
-
-
-
-
 }
-
-
-
 
 export default App;

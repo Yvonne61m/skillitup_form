@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "draft-js": "^0.10.5",
+    "draftjs-to-html": "^0.8.4",
+    "font": "0.0.4",
+    "html-to-draftjs": "^1.4.0",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-draft-wysiwyg": "^1.13.2",
     "react-jsonschema-form": "^1.5.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "resolve-url-loader": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,5 +30,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "font-awesome": "^4.7.0"
+  }
 }
